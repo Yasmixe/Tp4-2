@@ -3,12 +3,12 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 
-@app.route("/form2", methods=["POST"])
+@app.route("/")
 def form():
     return render_template("form2.html")
 
 
-@app.route("/resultats2", methods=["GET", "POST"])
+@app.route("/resultats2", methods=["POST"])
 def index():
     val1 = request.form["vala"]
     val2 = request.form["valb"]
